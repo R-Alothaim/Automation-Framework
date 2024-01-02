@@ -1,0 +1,43 @@
+# Compiled class files
+*.class
+/target/
+/bin/
+
+# Test outputs
+/test-output/
+/allure-results/
+/allure-report/
+/.allure/
+/reportHTML/
+
+# IDE specific files
+.classpath
+.project
+.settings/
+.vscode/
+.idea/
+*.iml
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Backup files
+.backup/
+
+# Maven wrapper
+.mvn/
+
+# Logs
+*.log
+
+# Drivers
+chromedriver*
+geckodriver*
+msedgedriver*
+
+# Excel files with test data (optional - uncomment to track)
+# *.xlsx
+
+# Environment specific properties (keep template only)
+# config.properties
