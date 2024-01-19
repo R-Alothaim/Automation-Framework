@@ -1,0 +1,194 @@
+{
+  "portal": {
+    "supportLink": {
+      "xpath": "//a[@href='/en/contact-us' and contains(text(), 'Support')]",
+      "css": "a[href='/en/contact-us']",
+      "description": "Support link on main portal page"
+    },
+    "cookieReject": {
+      "xpath": "//button[@id='CybotCookiebotDialogBodyButtonDecline'] | //button[contains(text(), 'Reject')] | //button[contains(text(), 'Decline')] | //button[contains(@class, 'reject')] | //button[contains(@class, 'decline')] | //a[contains(text(), 'Reject')] | //a[contains(text(), 'Decline')]",
+      "css": "#CybotCookiebotDialogBodyButtonDecline, button[class*='reject'], button[class*='decline'], a[class*='reject'], a[class*='decline']",
+      "description": "Cookie consent reject/decline button - supports Cookiebot and other common implementations"
+    }
+  },
+  "contactForm": {
+    "form": {
+      "tagName": "form",
+      "description": "Main contact form container"
+    },
+    "fullName": {
+      "xpath": "//input[@name='fullName']",
+      "name": "fullName",
+      "description": "Full name input field"
+    },
+    "email": {
+      "xpath": "//input[@name='email']",
+      "name": "email",
+      "description": "Email input field"
+    },
+    "phoneNumber": {
+      "xpath": "//input[@name='phoneNumber']",
+      "name": "phoneNumber",
+      "description": "Phone number input field"
+    },
+    "nationalId": {
+      "xpath": "//input[@name='nationalId' or @name='nationalID' or contains(@name, 'national')]",
+      "name": "nationalId",
+      "description": "National ID input field"
+    },
+    "iban": {
+      "xpath": "//input[@name='iban' or @name='IBAN' or contains(@name, 'iban')]",
+      "name": "iban",
+      "description": "IBAN input field"
+    },
+    "message": {
+      "xpath": "//textarea[@name='message']",
+      "name": "message",
+      "description": "Message textarea field"
+    },
+    "issueType": {
+      "input": {
+        "xpath": "//input[@id='subject']",
+        "id": "subject",
+        "description": "Issue type dropdown input"
+      },
+      "control": {
+        "xpath": "//input[@id='subject']/ancestor::div[contains(@class, 'control')]",
+        "description": "React-Select control container for issue type"
+      },
+      "controlDirect": {
+        "xpath": "//div[contains(@class, 'css-66or4u-control') or (contains(@class, 'control') and .//input[@id='subject'])]",
+        "description": "Direct control container by class or containing subject input"
+      }
+    },
+    "category": {
+      "input": {
+        "xpath": "//input[@id='category']",
+        "id": "category",
+        "description": "Category dropdown input"
+      },
+      "control": {
+        "xpath": "//input[@id='category']/ancestor::div[contains(@class, 'control')]",
+        "description": "React-Select control container for category"
+      },
+      "controlDirect": {
+        "xpath": "//div[contains(@class, 'control') and .//input[@id='category']]",
+        "description": "Direct control container containing category input"
+      },
+      "allComboboxes": {
+        "xpath": "//input[@role='combobox']",
+        "description": "All combobox inputs"
+      },
+      "reactSelectInputs": {
+        "xpath": "//input[contains(@id, 'react-select') or @role='combobox']",
+        "description": "React-Select inputs fallback"
+      }
+    },
+    "subCategory": {
+      "input": {
+        "xpath": "//input[@id='subCategory']",
+        "id": "subCategory",
+        "description": "Sub-category dropdown input"
+      },
+      "control": {
+        "xpath": "//input[@id='subCategory']/ancestor::div[contains(@class, 'control')]",
+        "description": "React-Select control container for sub-category"
+      },
+      "controlDirect": {
+        "xpath": "//div[contains(@class, 'control') and .//input[@id='subCategory']]",
+        "description": "Direct control container containing subCategory input"
+      }
+    },
+    "dropdownMenu": {
+      "menuClass": {
+        "css": ".css-1nmdiq5-menu",
+        "description": "React-Select dropdown menu container (visible menu)"
+      },
+      "menuListClass": {
+        "xpath": "//div[contains(@class, 'MenuList')]",
+        "description": "Dropdown menu list container"
+      },
+      "menuOrMenuList": {
+        "xpath": "//div[contains(@class, 'menu') or contains(@class, 'MenuList')]",
+        "description": "Dropdown menu - either menu or MenuList"
+      },
+      "optionClass": {
+        "xpath": "//div[contains(@class, 'option')]",
+        "description": "Dropdown option elements"
+      }
+    },
+    "dropdownOptions": {
+      "optionByExactText": {
+        "xpath": "//div[contains(@class, 'option') and normalize-space(text())='{{TEXT}}'",
+        "description": "Dropdown option by exact text match"
+      },
+      "optionByPartialText": {
+        "xpath": "//div[contains(@class, 'option') and contains(text(), '{{TEXT}}')]",
+        "description": "Dropdown option by partial text match"
+      },
+      "optionByIdExactText": {
+        "xpath": "//div[contains(@id, 'option') and normalize-space(text())='{{TEXT}}'",
+        "description": "Dropdown option by ID and exact text"
+      },
+      "optionInMenuExactText": {
+        "xpath": "//div[contains(@class, 'menu')]//div[normalize-space(text())='{{TEXT}}'",
+        "description": "Option inside menu by exact text"
+      },
+      "optionCssAnyExactText": {
+        "xpath": "//*[contains(@class, 'css-') and normalize-space(text())='{{TEXT}}' and not(contains(@class, 'placeholder'))]",
+        "description": "Any CSS-classed element by exact text (not placeholder)"
+      },
+      "optionByRole": {
+        "xpath": "//div[@role='option' and normalize-space(text())='{{TEXT}}'",
+        "description": "Option by role attribute and text"
+      },
+      "allOptions": {
+        "xpath": "//div[contains(@class, 'option') or contains(@id, 'option') or @role='option']",
+        "description": "All option elements (for debugging)"
+      }
+    },
+    "allCssElements": {
+      "xpath": "//div[contains(@class, 'css-')]",
+      "description": "All elements with CSS classes (for debugging)"
+    },
+    "privacyConsent": {
+      "xpath": "//input[@name='privacyPolicyConsent']",
+      "name": "privacyPolicyConsent",
+      "description": "Privacy policy consent checkbox"
+    },
+    "submitButton": {
+      "xpath": "//button[@type='submit']",
+      "type": "submit",
+      "description": "Form submit button"
+    }
+  },
+  "recaptcha": {
+    "responseTextarea": {
+      "name": "g-recaptcha-response",
+      "description": "reCAPTCHA response textarea"
+    },
+    "hiddenInputs": {
+      "xpath": "//input[contains(@name, 'recaptcha') or contains(@id, 'recaptcha') or contains(@name, 'captcha')]",
+      "description": "Hidden reCAPTCHA inputs"
+    }
+  },
+  "messages": {
+    "successMessage": {
+      "xpath": "//div[contains(@class, 'bg-green-100') and contains(@class, 'border-green-400')]",
+      "description": "Success message container (green background)"
+    },
+    "errorMessage": {
+      "css": ".text-red-500",
+      "description": "Error message elements (red text)"
+    },
+    "errorSpans": {
+      "tagName": "span",
+      "description": "Span elements within error messages"
+    }
+  },
+  "urls": {
+    "contactUsUrlPart": "/contact-us",
+    "portalBaseUrl": "https://portal.example.com",
+    "contactApiEndpoint": "/api/contact"
+  }
+}
