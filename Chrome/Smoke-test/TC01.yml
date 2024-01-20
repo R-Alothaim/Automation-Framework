@@ -1,0 +1,23 @@
+name: TC01 Smoke Test - DevOps
+description: Contact Form Validation Test for CI/CD Pipeline
+
+browser: chrome
+headless: true
+timeout: 30
+
+environment:
+  baseUrl: ${BASE_URL}
+  browser: chrome
+  browserVersion: latest
+  
+test:
+  suite: Smoke-test
+  class: tests.SmokeTests.TC01_ContactFormValidation_Test
+  
+reporting:
+  allure: true
+  screenshots: on-failure
+  
+execution:
+  parallel: false
+  threadCount: 1
