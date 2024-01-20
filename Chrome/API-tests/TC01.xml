@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="TC01 Contact Form API Test - Local" parallel="false">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="headless" value="false"/>
+    
+    <test name="Contact Form API Test">
+        <classes>
+            <class name="tests.APITests.TC01_ContactFormAPI_Test"/>
+        </classes>
+    </test>
+</suite>
