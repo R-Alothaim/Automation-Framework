@@ -1,0 +1,23 @@
+name: TC02 Smoke Test - DevOps
+description: Support Form Validation Errors Test for CI/CD Pipeline
+
+browser: chrome
+headless: true
+timeout: 30
+
+environment:
+  baseUrl: ${BASE_URL}
+  browser: chrome
+  browserVersion: latest
+  
+test:
+  suite: Smoke-test
+  class: tests.SmokeTests.TC02_SupportFormValidationErrors_Test
+  
+reporting:
+  allure: true
+  screenshots: on-failure
+  
+execution:
+  parallel: false
+  threadCount: 1
